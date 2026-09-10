@@ -1,0 +1,24 @@
+1. In what way are React components meant to be "pure functions"
+    i. Pure function is when a component renders same UI for the same props(state), every time.
+    ii. Rendering and re-rendering a component UI will never have any kind of side effects on an outside system.
+
+
+2. What is a "side effect" in React? What are some examples?
+    i. Side Effect is a property/function(useEffect) of REACT which re-runs the function given to it whenever the dependency on which the function depends      changes between RENDERS.
+    ii. Any code that affects or interacts with an outside system.
+    iii. Interacting with an API is also called a side effect even though we are not affecting an outside system, just interacting with it add it to the list of side effects.
+    iv. Local Storage, API, webSockets, DOm manipulation.
+
+
+3. What is NOT a "side effect" in React? Examples?
+    i. In REACT the functions/code REACT is in charge of.
+    ii. Maintaing state, keeping the UI in sync with data, rendering DOM elements.
+
+
+4. When does React run your useEffect function? When does it NOT run the effect function?
+   i. Whenever the dependency on which the function depends changes between renders the useEffect runs, and when there is no change to dependecy array the useEffect doesn't run.
+   ii. For the first time component renders.
+
+
+5. How would you explain what the "dependecies array" is?
+    Dependency array is the collection of all the properties on which the function depends and is needed to run only when there values change between RENDERS.
